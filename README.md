@@ -41,7 +41,6 @@ $sut = new Shop();
 
 $sut->checkout('aBc') # => -1
 $sut->checkout('-B8x') # => -1
-$sut->checkout(18) # => -1
 $sut->checkout('AA') # => 100
 $sut->checkout('ABCD') # => 115
 $sut->checkout('AAA') # => 130

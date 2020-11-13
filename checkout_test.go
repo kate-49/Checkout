@@ -15,6 +15,12 @@ func TestRun(t *testing.T) {
 		want := -1
 		assertEquals(t, got, want)
 	})
+
+	t.Run("Test for second acceptance criteria", func(t *testing.T) {
+		got := Run("AA")
+		want := 100
+		assertEquals(t, got, want)
+	})
 }
 
 func assertEquals(t *testing.T, got int, want int) {
