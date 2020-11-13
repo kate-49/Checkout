@@ -14,6 +14,7 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		{input: "ABCD", want: 115},
 		{input: "AAA", want: 130},
 		{input: "AAAAAA", want: 260},
+		{input: "BB", want: 45},
 	}
 
 	for _, tc := range tests {
