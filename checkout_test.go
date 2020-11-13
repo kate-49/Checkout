@@ -10,6 +10,7 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		// acceptance criteria tests
 		{input: "aBc", want: -1},
 		{input: "-B8x", want: -1},
+		{input: "AAAb", want: -1},
 		{input: "AA", want: 100},
 		{input: "ABCD", want: 115},
 		{input: "AAA", want: 130},
@@ -20,6 +21,7 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		{input: "BBBB", want: 90},
 
 		//tests for integrated offers and non offer items
+		{input: "", want: 0},
 		{input: "ACACA", want: 170},
 		{input: "BBDBDB", want: 120},
 	}
