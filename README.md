@@ -8,15 +8,15 @@ For example, item A might cost 50 pounds individually, but this week we have a s
 
 buy three As and they'll cost you 130.
 Our price table and offers:
-
-+------+-------+----------------+
-| Item | Price | Special offers |
-+------+-------+----------------+
-| A    | 50    | 3A for 130     |
-| B    | 30    | 2B for 45      |
-| C    | 20    |                |
-| D    | 15    |                |
-+------+-------+----------------+
+\n
++------+-------+----------------+ \n
+| Item | Price | Special offers | \n
++------+-------+----------------+ \n
+| A    | 50    | 3A for 130     | \n
+| B    | 30    | 2B for 45      | \n
+| C    | 20    |                | \n
+| D    | 15    |                | \n
++------+-------+----------------+ \n
 Notes:
 
 For any illegal input (non capitals) simply return -1
@@ -29,10 +29,10 @@ param[0] = eg. 'AAB', a String containing the SKUs of all the products in the ba
 Acceptance Criteria
 $sut = new Shop();
 
-$sut->checkout('aBc') # => -1
-$sut->checkout('-B8x') # => -1
-$sut->checkout(18) # => -1
-$sut->checkout('AA') # => 100
-$sut->checkout('ABCD') # => 115
-$sut->checkout('AAA') # => 130
-$sut->checkout('AAAAAA') # => 260
+$sut->checkout('aBc') # => -1 \n
+$sut->checkout('-B8x') # => -1 \n
+$sut->checkout(18) # => -1 \n
+$sut->checkout('AA') # => 100 \n
+$sut->checkout('ABCD') # => 115 \n
+$sut->checkout('AAA') # => 130 \n
+$sut->checkout('AAAAAA') # => 260 \n
