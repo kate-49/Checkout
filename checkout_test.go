@@ -2,29 +2,22 @@ package checkout
 
 import "testing"
 
-func TestRun(t *testing.T) {
+func TestLettersHaveCorrectValues(t *testing.T) {
+	tests := []struct {
+		input string
+		want  int
+	}{
+		// acceptance criteria tests
+		{input: "aBc", want: -1},
+		{input: "-B8x", want: -1},
+		{input: "AA", want: 100},
+		{input: "ABCD", want: 115},
+	}
 
-	t.Run("Test for first acceptance criteria", func(t *testing.T) {
-		got := Run("aBc")
-		want := -1
-		assertEquals(t, got, want)
-	})
-
-	t.Run("Test for second acceptance criteria", func(t *testing.T) {
-		got := Run("-B8x")
-		want := -1
-		assertEquals(t, got, want)
-	})
-
-	t.Run("Test for second acceptance criteria", func(t *testing.T) {
-		got := Run("AA")
-		want := 100
-		assertEquals(t, got, want)
-	})
-}
-
-func assertEquals(t *testing.T, got int, want int) {
-	if got != want {
-		t.Errorf("got %d want %d", got, want)
+	for _, tc := range tests {
+		got := Run(tc.input)
+		if tc.want != got {
+			t.Errorf("expected: %v, got: %v", tc.want, got)
+		}
 	}
 }
