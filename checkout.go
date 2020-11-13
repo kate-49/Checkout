@@ -11,7 +11,7 @@ func Run(input string) int {
 	var prices = map[string]int{"A": 50, "B": 30, "C": 20, "D": 15}
 
 	TotalAs := strings.Count(input, "A")
-	// BOffer := strings.Count(input, "BB")
+	TotalBs := strings.Count(input, "B")
 
 	if TotalAs > 0 {
 		offerAs := TotalAs / 3
@@ -20,10 +20,13 @@ func Run(input string) int {
 		answer += (remainingAs * 50)
 		input = strings.ReplaceAll(input, "A", "")
 	}
-	// if BOffer > 0 {
-	// 	answer += (45 * BOffer)
-	// 	input = strings.ReplaceAll(input, "BB", "")
-	// }
+	if TotalBs > 0 {
+		offerBs := TotalBs / 2
+		answer += (45 * offerBs)
+		remainingBs := TotalBs - (offerBs * 2)
+		answer += (remainingBs * 30)
+		input = strings.ReplaceAll(input, "B", "")
+	}
 
 	for _, letter := range input {
 		if unicode.IsLower(letter) {
